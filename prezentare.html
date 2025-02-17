@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezentare Aplicație Web</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 20px; }
+        h1, h2 { color: #2c3e50; }
+        .container { max-width: 900px; margin: auto; }
+        .uml-diagram { text-align: center; margin-top: 20px; }
+        .uml-diagram img { max-width: 100%; height: auto; }
+        .section { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Prezentare Aplicație Web: Gestionare Oferte Turistice</h1>
+
+    <div class="section">
+        <h2>1. Descrierea Aplicației</h2>
+        <p>Aplicația permite gestionarea ofertelor turistice. Fiecare ofertă conține patru atribute:</p>
+        <ul>
+            <li><strong>ID</strong> – Identificator unic, autoincrementat</li>
+            <li><strong>Țara</strong> – Destinația turistică</li>
+            <li><strong>Preț</strong> – Costul ofertei în Euro</li>
+            <li><strong>Număr de zile</strong> – Durata sejurului</li>
+        </ul>
+        <p>În prezent, oricine poate accesa și gestiona ofertele, dar se va implementa un sistem de autentificare.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Arhitectura Aplicației</h2>
+        <p>Aplicația urmează arhitectura **Model-View-Controller (MVC)** și conține următoarele componente:</p>
+        <ul>
+            <li><strong>Frontend</strong>: HTML, CSS, JavaScript</li>
+            <li><strong>Backend</strong>: PHP, MySQL</li>
+            <li><strong>Baza de date</strong>: Stochează ofertele</li>
+        </ul>
+        <p>Principalele operațiuni:</p>
+        <ul>
+            <li>Adăugare ofertă (Create)</li>
+            <li>Vizualizare oferte (Read)</li>
+            <li>Modificare ofertă (Update)</li>
+            <li>Ștergere ofertă (Delete)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Structura Bazei de Date</h2>
+        <pre>
+            CREATE TABLE oferte (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                tara VARCHAR(100) ,
+                pret INT ,
+                zile INT
+            );
+            </pre>
+        <p>Tabela <strong>oferte</strong> permite stocarea detaliilor fiecărei oferte turistice.</p>
+    </div>
+
+    <div class="section">
+        <h2>4. Soluția de Implementare</h2>
+        <p>Implementarea va folosi PHP pentru backend, iar datele vor fi gestionate într-o bază de date MySQL.</p>
+        <p>Vom folosi interogări pregătite (`Prepared Statements`) pentru securitate și protecție împotriva SQL Injection.</p>
+    </div>
+    <div class="section">
+        <h2>4. Soluția de Implementare</h2>
+        <p>Proiect realizat de MEHEDINTU MIHAIL OCTAVIAN</p>
+        <p>ANUL III</p>
+    </div>
+
+</div>
+</body>
+</html>
